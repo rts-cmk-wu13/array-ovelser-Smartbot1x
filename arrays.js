@@ -6,4 +6,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // --- Løs opgaverne herunder --- 
 
+    // --- opgave 1 --
+    catsArray.push("Whiskers");
+    console.log("opgave 1" , catsArray);
+
+
+    // -- opgave 2--
+
+    
+   
+// -- opgave 2--
+
+
 }) // ends DOMContentLoaded
