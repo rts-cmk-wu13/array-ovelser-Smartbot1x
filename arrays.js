@@ -1,85 +1,80 @@
 document.addEventListener("DOMContentLoaded", function () {
     let catsArray = ["Ollie", "Sophie", "Salem", "Tiger", "Binx", "Pumpkin", "Penny", "Lenny"];
     let dogsArray = ["Barney", "Molly", "Baxter", "Polly", "Buddy", "Suki", "Watson"];
-    let fruitsArray = ["Banana", "Orange", "Pineapple", "Mango", "Plum", "Apricot"]
-    let numbersArray = [12, 4, 45, 17, 2, 26, 7, 55, 48, 32, 21]
+    let fruitsArray = ["Banana", "Orange", "Pineapple", "Mango", "Plum", "Apricot"];
+    let numbersArray = [12, 4, 45, 17, 2, 26, 7, 55, 48, 32, 21];
 
-    // --- Løs opgaverne herunder --- 
+    // --- Løs opgaverne herunder ---
 
-    // --- opgave 1 array method Push --
-    catsArray.push("Whiskers");
-    console.log("opgave 1", catsArray);
+    // -- Opgave 1 --
+    let newNumbers = numbersArray.filter(number => number > 20);
+    console.log("Opgave 1", newNumbers);
 
+    // -- Opgave 2 --
+    catsArray.push("Sniffles");
+    console.log("Opgave 2", catsArray);
 
-    // -- opgave 2 array method pop--
+    // -- Opgave 3a --
+    console.log("Opgave 3a", dogsArray.includes("Trixie"));
 
-    // first time remove watson of the last element of array
-    dogsArray.pop();
-    console.log("Opgave 2", dogsArray);
-    // other method 
-    const Hund = dogsArray.pop();
-    console.log(Hund);
+    // -- Opgave 3b --
+    console.log("Opgave 3b", dogsArray.includes("Baxter"));
 
-    // -- opgave 3 array method sort--
-    fruitsArray.sort();
-    console.log("Opgave 3", fruitsArray);
+    // -- Opgave 4a --
+    let catBagheera = catsArray.find(cat => cat === "Bagheera");
+    console.log("Opgave 4a", catBagheera !== undefined ? catBagheera : "undefined");
 
-    // -- opgave 4  math.max method  --
+    // -- Opgave 4b --
+    let catSalem = catsArray.find(cat => cat === "Salem");
+    console.log("Opgave 4b", catSalem !== undefined ? catSalem : "undefined");
 
-    console.log("Opgave 4", Math.max(...numbersArray));
+    // -- Opgave 5 --
+    let multipliedNumbers = numbersArray.map(number => number * 3);
+    console.log("Opgave 5", multipliedNumbers);
 
+    // -- Opgave 6 --
+    let dogString = dogsArray.join("");
+    console.log("Opgave 6", dogString);
 
-    // let highestNumber = Math.max(...numbersArray);
-    // console.log("Opgave 4", highestNumber);
+    // -- Opgave 7a --
+    console.log("Opgave 7a", fruitsArray.indexOf("Mango"));
 
-    // -- opgave 5  concat method  --
+    // -- Opgave 7b --
+    console.log("Opgave 7b", fruitsArray.indexOf("Blåbær")); 
 
-    let Array5opg = catsArray.concat(dogsArray);
-    console.log("Opgave 5", Array5opg);
+    // -- Opgave 8 --
+    let dogsModified = dogsArray.indexOf("Polly");
+    if (dogsModified !== -1) {
+        dogsArray.splice(dogsModified, 1);
+    }
+    console.log("Opgave 8", dogsArray);
 
-    // -- opgave 6  filter method  --
+    // -- ekstra opgave --
 
-    let filterNummer = numbersArray.filter(number => number > 20);
-    console.log("Opgave 6 ", filterNummer);
-
-
-    // -- opgave 7  map method  --
-
-    const Numbers = numbersArray.map((x) => x * 10);
-    console.log("Opgave 7 ", Numbers);
-
-
-
-    // -- opgave 8  shift method  --
-    // let BananaGone = fruitsArray.shift();
-    // console.log("Opgave 8 ",BananaGone);
-
-    const fruits = fruitsArray.shift();
-
-    console.log("opgave 8:", fruits);
-
-
-
-
-    // -- opgave 9  --
-
-    let extraFruits = ["coconut", "guava"];
-    fruitsArray.unshift("banana", "vandmelon");
-    console.log("opgave 9:", extraFruits);
-    // gave up on this 
+    // [12, 4, 45, 17, 2, 26, 7, 55, 48, 32, 21]
+    let sum = numbersArray.reduce( (result, number) => result + number,500)
+        
+        
+    
+  /*   let sum = numbersArray.reduce( function(result, number,){
+        return result + number
+    }) */
+    console.log(" Ekstra Opgave ", sum);
+    
+});
 
 
-    // -- opgave 10  --
 
-    let fruitsplus = fruitsArray.map(fruit => fruit + " is good fruit");
-    console.log("Opgave 10 :", fruitsplus);
 
-    // -- opgave 11  --
 
-    const max = Math.max.apply(null, numbersArray);
-    console.log("Opgave 11 :", max);
 
-    const min = Math.min.apply(null, numbersArray);
-    console.log("Opgave 12 :", min);
 
-}) // ends DOMContentLoaded
+
+
+
+
+
+
+
+
+
