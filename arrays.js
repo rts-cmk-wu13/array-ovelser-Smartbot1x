@@ -6,16 +6,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // --- Løs opgaverne herunder --- 
 
-    // --- opgave 1 --
+    // --- opgave 1 array method Push --
     catsArray.push("Whiskers");
     console.log("opgave 1" , catsArray);
 
 
-    // -- opgave 2--
+    // -- opgave 2 array method pop--
 
-    
+    // first time remove watson of the last element of array
+    dogsArray.pop();
+    console.log("Opgave 2", dogsArray );
+    // other method 
+   const Hund = dogsArray.pop();
+   console.log(Hund);
    
-// -- opgave 2--
+// -- opgave 3 array method sort--
+fruitsArray.sort();
+console.log("Opgave 3", fruitsArray);
+
+// -- opgave 4  math.max method  --
+
+console.log(Math.max(...numbersArray));
+
+
+// let highestNumber = Math.max(...numbersArray);
+// console.log("Opgave 4", highestNumber);
+
+// -- opgave 5  concat method  --
+
+
+
 
 
 }) // ends DOMContentLoaded
