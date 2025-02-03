@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // -- opgave 4  math.max method  --
 
-    console.log("Opgave 4" , Math.max(...numbersArray));
+    console.log("Opgave 4", Math.max(...numbersArray));
 
 
     // let highestNumber = Math.max(...numbersArray);
@@ -35,11 +35,51 @@ document.addEventListener("DOMContentLoaded", function () {
     // -- opgave 5  concat method  --
 
     let Array5opg = catsArray.concat(dogsArray);
-    console.log("Opgave 5",Array5opg);
+    console.log("Opgave 5", Array5opg);
 
     // -- opgave 6  filter method  --
 
+    let filterNummer = numbersArray.filter(number => number > 20);
+    console.log("Opgave 6 ", filterNummer);
 
 
+    // -- opgave 7  map method  --
+
+    const Numbers = numbersArray.map((x) => x * 10);
+    console.log("Opgave 7 ", Numbers);
+
+
+
+    // -- opgave 8  shift method  --
+    // let BananaGone = fruitsArray.shift();
+    // console.log("Opgave 8 ",BananaGone);
+
+    const fruits = fruitsArray.shift();
+
+    console.log("opgave 8:", fruits);
+
+
+
+
+    // -- opgave 9  --
+
+    let extraFruits = ["coconut", "guava"];
+    fruitsArray.unshift("banana", "vandmelon");
+    console.log("opgave 9:", extraFruits);
+    // gave up on this 
+
+
+    // -- opgave 10  --
+
+    let fruitsplus = fruitsArray.map(fruit => fruit + " is good fruit");
+    console.log("Opgave 10 :", fruitsplus);
+
+    // -- opgave 11  --
+
+    const max = Math.max.apply(null, numbersArray);
+    console.log("Opgave 11 :", max);
+
+    const min = Math.min.apply(null, numbersArray);
+    console.log("Opgave 12 :", min);
 
 }) // ends DOMContentLoaded
